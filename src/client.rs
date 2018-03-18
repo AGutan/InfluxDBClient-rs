@@ -22,7 +22,6 @@ pub struct Client {
 }
 
 unsafe impl Send for Client {}
-unsafe impl Copy for Client {}
 
 impl Client {
     /// Create a new influxdb client with http
