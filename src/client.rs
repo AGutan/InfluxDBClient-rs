@@ -13,7 +13,7 @@ use std::net::{SocketAddr, ToSocketAddrs};
 use {error, serialization, Node, Point, Points, Precision, Query};
 
 /// The client to influxdb
-#[derive(Copy, Clone, Debug)]
+#[derive(Clone, Debug)]
 pub struct Client {
     host: String,
     db: String,
@@ -22,6 +22,7 @@ pub struct Client {
 }
 
 unsafe impl Send for Client {}
+unsafe impl Copy for Client {}
 
 impl Client {
     /// Create a new influxdb client with http
