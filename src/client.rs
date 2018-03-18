@@ -484,7 +484,7 @@ impl TLSOption {
     }
 }
 
-#[derive(Debug)]
+#[derive(Clone, Debug)]
 struct HttpClient {
     client: hyper_client,
 }
